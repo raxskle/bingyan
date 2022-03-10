@@ -1,0 +1,572 @@
+body,nav {
+    margin: 0;
+    padding: 0;
+    min-width: 1200px;
+    height: 1600px;
+    background-color: rgb(243, 243, 243);
+}
+
+.header, .main1, .main2, .text1, .text2, .main3, .main4 {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 导航 */
+
+.header {
+    height: 64px;      
+}
+
+.header a:hover {
+    color: #00db63;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    height: 64px;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    z-index: 1000000;
+    
+}
+
+.logo {
+    width: 217px;
+    height: 32px;
+    margin-right: 40px;    
+}
+
+
+.header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0px;
+
+}
+
+.header ul li {
+    list-style-type: none;
+    margin: 10px 20px;
+}
+
+.header  a {
+    text-decoration: none;
+    color: black;
+}
+
+.searchh {
+    height: 32px;
+    width: 247px;
+    border-radius: 16px ;
+    border: 2px rgb(29, 219, 115) solid ;
+    border-right: 3px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    position: relative;
+
+}
+
+.search {
+    margin-left: 20px;  
+    border: 0;
+    outline: none;
+}
+
+.searchlogo {
+    box-sizing: border-box;
+    position: absolute;
+    left: -100px;
+    top: 18px;
+    width: .7em;
+    height: .2em;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: .15em;
+    border-bottom-right-radius: .15em;
+    transform: rotate(40deg);
+    transform-origin: right center;
+    cursor: pointer;
+}
+ .searchlogo:before {
+    content: "";
+    position: absolute;
+    left: -1em;
+    bottom: -.4em;
+    width: .6em;
+    height:.6em;
+    border: .2em solid rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.searchh div::after{
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    right: 16px;
+
+
+}
+
+.sousuo {
+    cursor: pointer;
+    height: 33px;
+    width: 60px;
+    background-color: rgb(29, 219, 115);
+    border-radius: 16px 16px 16px 16px;
+    border: 0;
+    border-right: 2px solid rgb(29, 219, 115) ;
+    padding: 0;
+}
+
+.unlogin {
+    position: relative;
+}
+
+.unlogin span {
+    padding: 6px;
+}
+/*  */
+
+
+.main1 {
+    background-color: transparent;
+    height: 360px;
+    margin-top: 76px;
+    margin-bottom: 12px;
+}
+
+
+/* left1 */
+
+.left1 {
+    width: 200px;
+    height: 360px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.much {
+    overflow: visible;
+    margin: 12px 0;
+    border-radius: 8px;
+    width: 200px;
+    height: 560px;
+}
+
+.much a:hover{
+    text-decoration: underline;
+
+}
+
+
+
+.left1item {
+    box-sizing: border-box;
+    width: 200px;
+    height: 33px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 32px;
+    background-color: white;
+
+}
+
+
+
+.left1item:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.left1item:hover {
+    background-color: #c7f3db;
+    color: #00c758;
+
+}
+
+.more {
+    display: none;
+}
+
+/* .lookmore div:after {
+    content: '';
+    border: 10px solid black;
+    border-bottom: transparent;
+    border-left: transparent;
+
+} */
+
+
+
+
+
+
+
+
+
+
+/*  */
+
+.right1 {
+    width: 200px;
+    height: 360px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+
+}
+
+.right1 div:nth-child(1) {
+    width: 160px;
+    text-align: center;
+    color: rgb(129, 129, 129);
+}
+
+.right1 div:nth-child(3) {
+    width: 168px;
+    height: 32px;
+    background-color: #00c758;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+.right1 div:nth-child(4) {
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+}
+.main1 {
+    position: relative;
+
+}
+
+
+/*  */
+
+
+
+
+
+/* mid1 */
+.mid1 {
+    width: 776px;
+    height: 360px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+
+.item {
+    width: 776px;
+    height: 360px;
+    position: absolute;
+    border-radius: 8px;
+    transition: all 2s;
+
+}
+
+.item:nth-child(1) {
+    background-color: #bf98ff;
+}
+
+.item:nth-child(2) {
+    background-color: #c7c400;
+}
+
+.item:nth-child(3) {
+    background-color: #c7001b;
+}
+.item:nth-child(4) {
+    background-color: #a6b898;
+}
+
+.itemontop {
+    z-index: 10;
+}
+
+
+.goleft {
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    left: 230px;
+    border-radius: 25px;
+    border: 0;
+    display:none;
+    cursor: pointer;
+    background-color: rgba(119, 119, 119, 0.5);
+}
+
+.goright {
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    right: 230px;
+    border-radius: 25px;
+    border: 0;
+    display: none;
+    cursor: pointer;
+    background-color: rgba(119, 119, 119, 0.5);
+}
+
+
+
+.dianlist {
+    position: absolute;
+    display: flex;
+    z-index: 1000;
+    bottom: 12px;
+    left: 535px;
+
+}
+
+.dian {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: rgba(119, 119, 119, 0.5);
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.dianactive {
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+/*  */
+
+
+.main2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.main2 img {
+    width: 120px;
+
+}
+
+.main2 ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+    padding: 0;
+
+}
+
+
+
+.text1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    margin-top: 32px;
+
+}
+.text2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 32px;
+}
+
+
+/* main3 */
+.main3 {
+    width: 2440px;
+    height: 290px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    display: flex;
+    
+}
+
+
+.tenbox {
+    background-color: white;
+    height: 290px;
+    width: 224px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tenbox:hover {
+    box-shadow:0px 8px 12px 8px #e0dfdf ;    
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tenbox img {
+    width: 224px;
+    height: 126px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.tenboxtext {
+    padding: 10px 12px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 224px;
+    height: 167px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(63, 63, 63);
+}
+
+.th3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.tp1 {
+    margin: 0;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.tp2 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.tdiv {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    background-color: rgb(243, 243, 243);
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+
+/*  */
+
+.main4 {
+    height: 496px;
+    width: 1200px;
+    background-color: transparent;
+
+}
+
+.box {
+    width: 387px;
+    height: 496px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+.aside {
+    width: 40px;
+    height: 496px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 8px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.asitop {
+    height: 200px;
+    margin-bottom: 8px;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+
+.asimid {
+    height: 100px;
+    background-color: #00c758;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.asimid div {
+    width: 16px;
+    font-size: 16px;
+    color: white;
+    line-height: 18px;
+
+}
+
+.asibottom {
+    height: 180px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ab {
+    box-sizing: border-box;
+    height: 60px;
+    width: 24px;
+    font-size: 12px;
+
+}
+
+.ab1, .ab2 {
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
