@@ -12,7 +12,7 @@
 
 - 上午满课下午有课，今天的工作时间较少，页面还没写完
 
-* 学会如何用 window.scrollTo() back to top
+* 学会如何用 window.scrollTo() back to top smoothly
 
 * 学习了部分 Node.js 的 fs 模块、http 模块，express 框架，或许明后天能做一下
 
