@@ -7,6 +7,10 @@ nav {
   background-color: rgb(245, 245, 245);
 }
 
+html {
+  position: relative;
+}
+
 .navbar,
 .main1,
 .main2,
@@ -106,9 +110,9 @@ nav {
 .searchlogo {
   box-sizing: border-box;
   position: absolute;
-  left: -100px;
+  left: -98px;
   top: 18px;
-  width: 0.7em;
+  width: 0.6em;
   height: 0.2em;
   background-color: rgb(255, 255, 255);
   border-top-right-radius: 0.15em;
@@ -215,7 +219,7 @@ nav {
   top: 8px;
   left: 32px;
   border: transparent solid 6px;
-  border-top: rgb(138, 138, 138) solid 8px;
+  border-top: rgb(138, 138, 138) solid 6px;
   position: absolute;
   transition: all 0.2s;
 }
@@ -223,14 +227,13 @@ nav {
 .menubtnActive {
   width: 0px;
   height: 0px;
-  top: 8px;
   left: 32px;
+  top: 2px;
   border: transparent solid 6px;
-  border-top: rgb(138, 138, 138) solid 8px;
+  border-top: rgb(138, 138, 138) solid 6px;
   position: absolute;
   transition: all 0.2s;
   transform: rotate(180deg);
-  top: 0px;
 }
 
 .menu {
@@ -741,6 +744,7 @@ nav {
   font-size: 20px;
   font-weight: 1000;
   color: rgb(214, 145, 55);
+  padding-left: 20px;
 }
 .main4BoxHead span:nth-child(2) {
   font-size: 0.9em;
@@ -753,7 +757,7 @@ nav {
   font-weight: bold;
   font-style: italic;
   color: #e2e2e2;
-  padding-left: 28px;
+  padding-left: 20px;
 }
 
 .contentItem {
@@ -761,22 +765,32 @@ nav {
   width: 387px;
   height: 64px;
   margin-bottom: 20px;
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .number {
-  height: 30px;
-  width: 24px;
+  height: 40px;
+  width: 30px;
   padding-top: 5px;
   color: #b8b8b8;
   font-size: 20px;
   align-self: flex-start;
+  justify-self: center;
 }
 
 .numberfirst {
   color: #fa5055;
+}
+
+.numbersecond {
+  color: #ff7130;
+}
+
+.numberthird {
+  color: #ffb425;
 }
 
 .pic4 {
@@ -823,7 +837,7 @@ nav {
 .contentSheet {
   width: 1935px;
   height: 400px;
-  background-color: #bf98ff;
+  background-color: transparent;
   display: flex;
   position: absolute;
   left: 0px;
@@ -834,26 +848,32 @@ nav {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 200px;
+  top: 220px;
   left: 10px;
   border-radius: 25px;
   border: 0;
-  /* display: none; */
   cursor: pointer;
   background-color: rgba(141, 141, 141, 0.425);
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 .main4goRight {
   z-index: 10000;
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 200px;
+  top: 220px;
   right: 10px;
   border-radius: 25px;
   border: 0;
-  /* display: none; */
   cursor: pointer;
   background-color: rgba(141, 141, 141, 0.425);
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .main4goLeft:hover,

@@ -1,0 +1,136 @@
+.loginPage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10000000;
+  background-color: rgba(0, 0, 0, 0.45);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+
+.loginPageContainer {
+  z-index: 100000000;
+  position: fixed;
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  border-radius: 2px;
+
+  margin-top: 100px;
+  border: 1px solid rgb(124, 124, 124);
+}
+
+.loginClose {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginClose:hover {
+  cursor: pointer;
+}
+.option {
+  height: 80px;
+  width: auto;
+  /* border-bottom: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.toLogin {
+  height: 50px;
+  width: 200px;
+  border: 0;
+  background-color: white;
+  border-bottom: 2px solid rgb(6, 199, 6);
+  font-size: 25px;
+  color: rgb(6, 199, 6);
+  cursor: pointer;
+}
+
+.toRegister {
+  height: 50px;
+  width: 200px;
+  border: 0;
+  background-color: white;
+  border-bottom: 2px solid rgb(136, 136, 136);
+  font-size: 25px;
+  color: rgb(136, 136, 136);
+  cursor: pointer;
+}
+
+.loginForm {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+}
+
+.loginBox {
+  height: 40px;
+  width: 280px;
+  margin: 10px;
+  border: 1px rgb(185, 185, 185) solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.loginBox input {
+  outline: none;
+  height: 30px;
+  width: 220px;
+  border: none;
+}
+
+.ok {
+  width: 280px;
+  height: 40px;
+  background-color: rgb(6, 199, 6);
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.registerForm {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+}
+
+.registerBox {
+  height: 40px;
+  width: 280px;
+  margin: 10px;
+  border: 1px rgb(185, 185, 185) solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.registerBox input {
+  outline: none;
+  height: 30px;
+  width: 220px;
+  border: none;
+}

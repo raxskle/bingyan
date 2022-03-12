@@ -12,8 +12,18 @@
 
 - 上午满课下午有课，今天的工作时间较少，页面还没写完
 
-* 学会如何用 window.scrollTo() back to top smoothly
+* 学会如何用 window.scrollTo() back to top soomthly
 
 * 学习了部分 Node.js 的 fs 模块、http 模块，express 框架，或许明后天能做一下
 
 * 学习了 css 和 js 命名规范，并尝试将代码中命名更加规范化一点（写着写着又乱起名了../(ㄒ o ㄒ)/~~
+
+## 3.12
+
+### 上午 中午
+
+- 完成了登录弹出的界面和基本的页面
+
+- 用 css 加上一些更顺滑的动画，使用了 font awesome 做图标，不再使用 png 贴图
+
+* 还差搜索栏与登录后页面没做，代码写得有点乱

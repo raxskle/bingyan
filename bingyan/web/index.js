@@ -155,7 +155,6 @@ setInterval(function(){
 
 {//编辑推荐
     let bigbox = document.querySelector('.main3contenter');
-    console.log(bigbox.offsetLeft)
     let left = document.querySelector('.beforemain3')
     let right = document.querySelector('.aftermain3')
     left.addEventListener('click',()=>{
@@ -272,6 +271,118 @@ setInterval(function(){
 
 
 
+{//login
+    let loginClose = document.querySelector('.loginClose');
+    let loginPage = document.querySelector('.loginPage');
+    let LoginBtn = document.querySelector('.right1LoginBtn');
+    let navLoginBtn = document.querySelector('.navLoginBtn');
+    loginClose.addEventListener('click', () => {
+        loginPage.style.display = 'none';
+    })
+    LoginBtn.addEventListener('click', () => {
+        loginPage.style.display = 'flex';        
+    })
+    navLoginBtn.addEventListener('click', () => {
+        loginPage.style.display = 'flex';        
+    })    
+
+    let toLogin = document.querySelector('.toLogin');
+    let toRegister = document.querySelector('.toRegister');
+    let loginForm = document.querySelector('.loginForm');
+    let registerForm = document.querySelector('.registerForm');
+    toLogin.addEventListener('click', () => {
+        toLogin.style.color = 'rgb(6, 199, 6)';
+        toLogin.style.borderBottom = '2px solid rgb(6, 199, 6)';
+        toRegister.style.color = 'rgb(136, 136, 136)';
+        toRegister.style.borderBottom = '2px solid rgb(136, 136, 136)';
+        registerForm.style.display = 'none';        
+        loginForm.style.display = 'flex';
+    })
+
+    toRegister.addEventListener('click', () => {
+        toRegister.style.color = 'rgb(6, 199, 6)';
+        toRegister.style.borderBottom = '2px solid rgb(6, 199, 6)';
+        toLogin.style.color = 'rgb(136, 136, 136)';
+        toLogin.style.borderBottom = '2px solid rgb(136, 136, 136)';
+        loginForm.style.display = 'none';        
+        registerForm.style.display = 'flex';
+    })    
+    
+    
+
+}
+
+{//本周课程安排
+    let goLeft = document.querySelectorAll('.main4goLeft');
+    let goRight = document.querySelectorAll('.main4goRight');
+    let contentSheet = document.querySelectorAll('.contentSheet');
+    let main4mid = document.querySelectorAll('.main4mid');
+    for (let i = 0; i < 3; i++){
+
+        main4mid[i].addEventListener('mouseover', () => {
+            if (contentSheet[i].offsetLeft <= -387 && contentSheet[i].offsetLeft >=-1548) {
+                goLeft[i].style.display = 'flex';
+            }
+            if (contentSheet[i].offsetLeft >= -1161 && contentSheet[i].offsetLeft <=0) {
+                goRight[i].style.display = 'flex'; 
+            }
+
+        })        
+
+        goRight[i].addEventListener('click', () => {
+            let beforeCoord = contentSheet[i].offsetLeft;        
+
+            if (contentSheet[i].offsetLeft <= -1161) {
+                goRight[i].style.display = 'none';
+            }
+            if (contentSheet[i].offsetLeft <= 0) {
+                goLeft[i].style.display = 'flex';            
+            }
+            let rightTimer = setInterval(() => {
+                if (contentSheet[i].offsetLeft <= beforeCoord - 378) {
+                    clearTimeout(rightTimer);
+                }
+                contentSheet[i].style.left = contentSheet[i].offsetLeft + -9 + 'px';
+            }, 1)
+
+            goRight[i].disabled = 'disabled';  //防止飞走  
+            setTimeout(() => {
+                goRight[i].disabled = ''; 
+            },200)
+
+        })
+
+        goLeft[i].addEventListener('click', () => {
+            let beforeCoord = contentSheet[i].offsetLeft;        
+
+            if (contentSheet[i].offsetLeft >= -387) {
+                goLeft[i].style.display = 'none';
+            }
+            if (contentSheet[i].offsetLeft <= -1161) {
+                goRight[i].style.display = 'flex';            
+            }
+            let leftTimer = setInterval(() => {
+                if (contentSheet[i].offsetLeft >= beforeCoord + 378) {
+                    clearTimeout(leftTimer);
+                }
+                contentSheet[i].style.left = contentSheet[i].offsetLeft + 9 + 'px';
+            }, 1)
+
+            goLeft[i].disabled = 'disabled';    
+            setTimeout(() => {
+                goLeft[i].disabled = ''; 
+            },200)
+        })  
 
 
 
+        main4mid[i].addEventListener('mouseout', () => {
+            goLeft[i].style.display = 'none';
+            goRight[i].style.display = 'none';
+        })
+
+         
+    }
+
+
+}

@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MyMooc</title>
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="loginmodule.css" />
+	<link rel="stylesheet"  href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" />
 </head>
 <body>
     <nav>
@@ -30,7 +32,7 @@
     
             <div class="unlogin">
                 <div class="searchlogo"></div>                   
-                <a href="#">登录<span>|</span>注册</a>
+                <a class="navLoginBtn" href="#">登录<span>|</span>注册</a>
             </div>
 
             <div class="banner"><img src="images\QRcode.png"></div>
@@ -85,15 +87,15 @@
         <div class="left1">
             <div class="fullList">
                 <div class="left1item"><a class="a1" href="#">国家精品</a></div>
-                <div class="left1item"><a class="a1" href="#">计算机</a><a class="a2" href="#">大数据与人工智能 /...</a></div>                
-                <div class="left1item"><a class="a1" href="#">外语</a><a class="a2" href="#">听力/口语 / 写作/翻译</a></div>
-                <div class="left1item"><a class="a1" href="#">理学工学农学</a><a class="a2" href="#">数学/物理/</a></div>
-                <div class="left1item"><a class="a1" href="#">2023考研</a><a class="a2" href="#">数学/英语/政治/</a></div>
-                <div class="left1item"><a class="a1" href="#">期末不挂科</a><a class="a2" href="#">数学不挂科/</a></div>
-                <div class="left1item"><a class="a1" href="#">大学应试英语</a><a class="a2" href="#">四六级/</a></div>
-                <div class="left1item"><a class="a1" href="#">考编·考证</a><a class="a2" href="#">公务员考试</a></div>
-                <div class="left1item"><a class="a1" href="#">求职就业</a><a class="a2" href="#">互联网求职/</a></div>
-                <div class="left1item lookmore">更多<div class="sanjiao"></div></div>
+                <div class="left1item"><a class="a1" href="#">计算机</a><a class="a2" href="#" title="大数据与人工智能">大数据与人工智能</a>/...</div>                
+                <div class="left1item"><a class="a1" href="#">外语</a><a class="a2" href="#" title="听力/口语 / 写作/翻译">听力/口语 / 写作/翻译</a></div>
+                <div class="left1item"><a class="a1" href="#">理学工学农学</a><a class="a2" href="#" title="数学/物理">数学/物理</a>/</div>
+                <div class="left1item"><a class="a1" href="#">2023考研</a><a class="a2" href="#" title="数学/英语/政治">数学/英语/政治</a>/</div>
+                <div class="left1item"><a class="a1" href="#">期末不挂科</a><a class="a2" href="#" title="数学不挂科">数学不挂科</a>/</div>
+                <div class="left1item"><a class="a1" href="#">大学应试英语</a><a class="a2" href="#" title="四六级">四六级</a>/</div>
+                <div class="left1item"><a class="a1" href="#">考编·考证</a><a class="a2" href="#" title="公务员考试">公务员考试</a></div>
+                <div class="left1item"><a class="a1" href="#">求职就业</a><a class="a2" href="#" title="互联网求职">互联网求职</a>/</div>
+                <div class="left1item lookmore">更多<div class="fa fa-angle-down"></div></div>
                 
                 <div class="extend">
                     <div class="left1item"><a class="a1" href="#">经济管理</a><a class="a2" href="#">大数据与人工智能/</a></div>
@@ -132,7 +134,7 @@
     <div class="right1">
         <div>免费学习来自名校名师的精品课程</div>
         <div><img src="images\userunlogin.png"></div>
-        <div>登录/注册</div>
+        <div class="right1LoginBtn">登录/注册</div>
         <div>网易和高等教育出版社出品</div>
     </div>
     </div>
@@ -141,6 +143,7 @@
     <div class="main2">
         <div class="left2">
             <a href="https://www.bilibili.com/" target="_blank">全部801所高校</a>
+            <span class="fa fa-angle-right"></spancla>
         </div>
         <ul>
             <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.jpg"></a></li>
@@ -254,9 +257,6 @@
 
     <div class="title2">本周课程安排</div>
     <div class="main4"><!--三个一样的-->
-        <div class="box main4left">
-        </div>
-
 
         <div class="box main4mid">
             <div class="main4BoxHead">
@@ -269,7 +269,7 @@
                     <div class="contentSheet">
                         <div class="contentPage">
                             <div class="contentItem">
-                                <div class="number">1</div>
+                                <div class="number numberfirst">1</div>
                                 <img class="pic4" src="images\main4pic.png">
                                 <div class="itemtext4">
                                     <h3>Python语言程序设计</h3>
@@ -278,7 +278,7 @@
                                 </div>
                             </div>
                             <div class="contentItem">
-                                <div class="number">1</div>
+                                <div class="number numbersecond">2</div>
                                 <img class="pic4" src="images\main4pic.png">
                                 <div class="itemtext4">
                                     <h3>Python语言程序设计</h3>
@@ -287,7 +287,7 @@
                                 </div>
                             </div>
                             <div class="contentItem">
-                                <div class="number">1</div>
+                                <div class="number numberthird">3</div>
                                 <img class="pic4" src="images\main4pic.png">
                                 <div class="itemtext4">
                                     <h3>Python语言程序设计</h3>
@@ -510,14 +510,525 @@
                 </div>
 
             </div>   
-            <div class="main4goLeft"></div>
-            <div class="main4goRight"></div>                     
+            <button class="main4goLeft"><span class="fa fa-angle-left fa-2x"></span></button>
+            <button class="main4goRight"><span class="fa fa-angle-right fa-2x"></span></button>                     
+        </div>
+
+        <div class="box main4mid">
+            <div class="main4BoxHead">
+                <span>热门排行</span>
+                <span>TOP50</span>
+                <span>POPULAR COURSES</span>
+            </div>
+            <div class="mainBoxBody">
+                <div class="main4BodyWarp">
+                    <div class="contentSheet">
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number numberfirst">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number numbersecond">2</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number numberthird">3</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>   
+            <button class="main4goLeft"><span class="fa fa-angle-left fa-2x"></span></button>
+            <button class="main4goRight"><span class="fa fa-angle-right fa-2x"></span></button>                     
+        </div>
+
+
+        <div class="box main4mid">
+            <div class="main4BoxHead">
+                <span>热门排行</span>
+                <span>TOP50</span>
+                <span>POPULAR COURSES</span>
+            </div>
+            <div class="mainBoxBody">
+                <div class="main4BodyWarp">
+                    <div class="contentSheet">
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number numberfirst">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number numbersecond">2</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number numberthird">3</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contentPage">
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                            <div class="contentItem">
+                                <div class="number">1</div>
+                                <img class="pic4" src="images\main4pic.png">
+                                <div class="itemtext4">
+                                    <h3>Python语言程序设计</h3>
+                                    <p>北京理工大学</p>
+                                    <p>73995人参加</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>   
+            <button class="main4goLeft"><span class="fa fa-angle-left fa-2x"></span></button>
+            <button class="main4goRight"><span class="fa fa-angle-right fa-2x"></span></button>                     
         </div>
 
 
 
-
-        <div class="box main4right"></div>
     </div>
 
 
@@ -531,6 +1042,43 @@
             <div class="sbcontentTop sb3"><a><img src="images\dingbu.png">顶部</a></div>
         </div>
     </div> 
+
+    <div class="loginPage">
+
+        <div class="loginPageContainer">
+            <div class="loginClose">
+                <span class="fa fa-close fa-lg"></span>
+            </div>
+            <div class="option">
+                <button class="toLogin">登录</button>
+                <button class="toRegister">注册</button>
+            </div>
+            <div class="loginForm">
+                <div class="loginBox">
+                    <i class="fa fa-user-o fa-lg"></i>
+                    <input class="loginId" type="text" placeholder="用户名">                 
+                </div>
+                <div class="loginBox">
+                    <i class="fa fa-star-o fa-lg"></i>
+                    <input class="loginPW" type="password" placeholder="密码" >                    
+                </div>
+                <div class="ok">登录 <i class="fa fa-check-square-o fa-lg"></i></div>
+            </div>
+
+            <div class="registerForm">
+                <div class="registerBox">
+                    <i class="fa fa-user-o fa-lg"></i>
+                    <input class="registerId" type="text" placeholder="新用户名">                 
+                </div>
+                <div class="registerBox">
+                    <i class="fa fa-star-o fa-lg"></i>
+                    <input class="registerPW" type="password" placeholder="密码" >                    
+                </div>
+                <div class="ok">注册 <i class="fa fa-plus fa-lg"></i></div>
+            </div>
+
+        </div>
+    </div>      
     
     <script src="index.js"></script>
 </body>
