@@ -238,6 +238,81 @@ setInterval(function(){
     })
 }
 
+{//搜索
+    let searchContent = document.querySelector('.search');
+    let searchPop = document.querySelector('.searchpop');
+    let searchPoplist = document.querySelector('.searchpop ul');
+    let searchPopFirstItem = document.querySelector('.searchpopfirstitem');
+    let searchPopFirstItemSpan = document.querySelector('.searchpopfirstitem span');
+
+    searchContent.addEventListener('focus', () => {
+        let timer = null;
+        searchContent.oninput = () => {
+            searchPop.style.display = 'block';
+            let searchText = searchContent.value;
+            searchPopFirstItemSpan.innerHTML = searchText;
+            clearTimeout(timer);
+
+            if (searchContent.value == '') {
+                searchPop.style.display = 'none';
+            }
+
+            timer = setTimeout(() => {//延时发送 避免按得太快爆掉
+                let deleteItem = document.querySelectorAll('.searchpopitem');
+                for (let i = 0; i < deleteItem.length; i++){
+                    if (deleteItem[i] != null) {
+                        deleteItem[i].parentNode.removeChild(deleteItem[i]);
+                    }
+                }
+                // ajax
+                if (searchText != '') {
+                    const xhr = new XMLHttpRequest();
+                    xhr.responseType = 'json';
+                    xhr.open('GET', "http://127.0.0.1/search?value="+searchText);
+                    xhr.send();
+                    xhr.onreadystatechange = () => {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status >= 200 && xhr.status < 300) {
+                                console.log(xhr.response.length);
+                                for (let i = 0; i < xhr.response.length; i++){
+                                    var item = document.createElement('li');
+                                    item.className = 'searchpopitem';
+                                    item.innerHTML = xhr.response[i].text;
+                                    searchPoplist.appendChild(item);
+                                }
+
+                            }
+                        }
+                    }   
+                    
+                }                
+
+            }, 400);
+
+        }
+
+    })
+
+    searchContent.addEventListener('blur', () => {
+        searchPop.style.display = 'none';
+        let deleteItem = document.querySelectorAll('.searchpopitem');
+        for (let i = 0; i < deleteItem.length; i++){
+            if (deleteItem[i] != null) {
+                deleteItem[i].parentNode.removeChild(deleteItem[i]);
+            }
+        }
+
+    })  
+    
+
+}
+
+
+
+
+
+
+
 {//回到顶部
     let toTopBtn = document.querySelector('.sb3');
     let sidebottomTop = document.querySelector('.sidebottomTop');
@@ -379,8 +454,103 @@ setInterval(function(){
             goRight[i].style.display = 'none';
         })
 
-         
     }
+
+}
+
+
+{//注册
+    let registerId = document.querySelector('.registerId');
+    let registerPw = document.querySelector('.registerPw');
+    let registerSubmit = document.querySelector('.registerSubmit');
+    let registerAlert = document.querySelector('.registerAlert');
+    registerSubmit.addEventListener('click', () => {
+        if ( !registerId.value  ) {
+            registerAlert.innerHTML = '请输入要注册的用户名';
+            return;
+        }
+        else if (!registerPw.value) {
+            registerAlert.innerHTML = '请输入密码';     
+            return;
+        }
+
+        if ( registerId.value  ) {
+            registerAlert.innerHTML = '';
+        }
+        else if (registerPw.value) {
+            registerAlert.innerHTML = '';            
+        }        
+        const username = registerId.value;
+        const password = registerPw.value;
+        const xhr = new XMLHttpRequest();
+        // xhr.responseType = 'json';
+        xhr.open('POST', "http://127.0.0.1/register?username="+username+"&password="+password);
+        xhr.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    registerAlert.innerHTML = xhr.response;
+                    setTimeout(() => {
+                        registerAlert.innerHTML = "";
+                    },3000)
+
+                }
+            }
+        }   
+    })
+
+
+}
+
+
+
+{//注册
+    let loginId = document.querySelector('.loginId');
+    let loginPw = document.querySelector('.loginPw');
+    let loginSubmit = document.querySelector('.loginSubmit');
+    let loginAlert = document.querySelector('.loginAlert');
+    loginSubmit.addEventListener('click', () => {
+        if ( !loginId.value  ) {
+            loginAlert.innerHTML = '请输入用户名';
+            return;
+        }
+        else if (!loginPw.value) {
+            loginAlert.innerHTML = '请输入密码';     
+            return;
+        }
+
+        if ( loginId.value  ) {
+            loginAlert.innerHTML = '';
+        }
+        else if (loginPw.value) {
+            loginAlert.innerHTML = '';            
+        }        
+        const username = loginId.value;
+        const password = loginPw.value;
+        const xhr = new XMLHttpRequest();
+        // xhr.responseType = 'json';
+        xhr.open('POST', "http://127.0.0.1/login?username="+username+"&password="+password);
+        xhr.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    loginAlert.innerHTML = xhr.response;
+                    setTimeout(() => {
+                        loginAlert.innerHTML = "";
+                        // 跳到新页面
+
+
+
+
+
+
+                    }, 3000)
+                    
+
+                }
+            }
+        }   
+    })
 
 
 }

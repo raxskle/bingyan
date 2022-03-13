@@ -110,8 +110,8 @@ nav {
 .searchlogo {
   box-sizing: border-box;
   position: absolute;
-  left: -98px;
-  top: 18px;
+  left: 218px;
+  top: 23px;
   width: 0.6em;
   height: 0.2em;
   background-color: rgb(255, 255, 255);
@@ -153,7 +153,58 @@ nav {
   padding: 0;
 }
 
-.unlogin {
+.searchpop {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  top: 36px;
+  background-color: white;
+  border: #d9ecda 1px solid;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+}
+
+.searchpoptips {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  padding: 4px;
+}
+
+.searchpop ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #dcf8e9;
+  color: #008b13;
+}
+
+.searchpop ul li {
+  width: 220px;
+  height: 30px;
+  line-height: 26px;
+  box-sizing: border-box;
+  padding: 2px 4px;
+  margin: 0 !important;
+  transition: all 0.4s;
+  overflow: hidden !important;
+}
+
+.searchpopfirstitem:hover {
+  background-color: #008b13;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.searchpopitem:hover {
+  background-color: #008b13;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.searchpop .unlogin {
   position: relative;
 }
 
@@ -245,7 +296,7 @@ nav {
   left: 180px;
   z-index: 1000;
   border-radius: 2px;
-  box-shadow: 0 0 2px 3px rgba(179, 179, 179, 0.349);
+  box-shadow: 0 0 4px 4px rgba(179, 179, 179, 0.349);
   padding: 20px;
   display: none;
 }
@@ -704,12 +755,12 @@ nav {
   width: 200px;
   height: 50px;
   align-self: center;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(246, 246, 246);
   font-size: 12px;
   box-sizing: border-box;
   padding: 5px;
   border-radius: 8px;
-  color: rgb(116, 116, 116);
+  color: rgb(129, 129, 129);
 }
 
 /* 本周热门排行 */
@@ -744,7 +795,7 @@ nav {
   font-size: 20px;
   font-weight: 1000;
   color: rgb(214, 145, 55);
-  padding-left: 40px;
+  padding-left: 38px;
 }
 .main4BoxHead span:nth-child(2) {
   font-size: 0.9em;
@@ -911,6 +962,7 @@ nav {
   background-color: aliceblue;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .sidemid {

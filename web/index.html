@@ -28,10 +28,18 @@
             <form class="searchwarpper">
                 <input class='search' type="text" placeholder="搜索感兴趣的课程">
                 <input class="searchbtn" type="submit" value="" >
+                <div class="searchlogo"></div> 
+                <div class="searchpop">
+                    <div class="searchpoptips">请选择或继续输入...</div>
+                    <ul>
+                        <li class="searchpopfirstitem">搜索“<span></span>”所有相关课程</li>
+                        
+                    </ul>
+                </div>                  
             </form>
     
             <div class="unlogin">
-                <div class="searchlogo"></div>                   
+                
                 <a class="navLoginBtn" href="#">登录<span>|</span>注册</a>
             </div>
 
@@ -299,9 +307,10 @@
                 </div>
                 <div class="loginBox">
                     <i class="fa fa-star-o fa-lg"></i>
-                    <input class="loginPW" type="password" placeholder="密码" >                    
+                    <input class="loginPw" type="password" placeholder="密码" >                    
                 </div>
-                <div class="ok">登录 <i class="fa fa-check-square-o fa-lg"></i></div>
+                <div class="loginAlert"></div>
+                <div class="ok loginSubmit">登录 <i class="fa fa-check-square-o fa-lg"></i></div>
             </div>
 
             <div class="registerForm">
@@ -311,9 +320,10 @@
                 </div>
                 <div class="registerBox">
                     <i class="fa fa-star-o fa-lg"></i>
-                    <input class="registerPW" type="password" placeholder="密码" >                    
+                    <input class="registerPw" type="password" placeholder="密码" >                    
                 </div>
-                <div class="ok">注册 <i class="fa fa-plus fa-lg"></i></div>
+                <div class="registerAlert"></div>
+                <div class="ok registerSubmit">注册 <i class="fa fa-plus fa-lg"></i></div>
             </div>
 
         </div>
