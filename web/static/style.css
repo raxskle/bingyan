@@ -1,10 +1,38 @@
+:root {
+  --title: black;
+  --text1: rgb(133, 133, 133);
+  --text2: rgb(172, 172, 172);
+  --subtitle: rgb(228, 156, 63);
+  --subtext: rgb(228, 228, 228);
+  --subbackground: rgb(228, 228, 228);
+  --background: rgb(245, 245, 245);
+  --box: white;
+
+  --bright-title: black;
+  --bright-text1: rgb(133, 133, 133);
+  --bright-subtitle: rgb(228, 156, 63);
+  --bright-subtext: rgb(228, 228, 228);
+  --bright-background: rgb(245, 245, 245);
+  --bright-box: white;
+
+  --dark-title: white;
+  --dark-text1: rgb(204, 204, 204);
+  --dark-text2: rgb(122, 122, 122);
+  --dark-subtitle: rgb(228, 156, 63);
+  --dark-subtext: rgb(73, 73, 73);
+  --dark-background: rgb(0, 0, 0);
+  --dark-box: rgb(31, 31, 31);
+}
+
 body,
 nav {
   margin: 0;
   padding: 0;
   min-width: 1200px;
   height: 1600px;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background, rgb(245, 245, 245));
+  color: var(--title, black);
+  transition: 0.4s all;
 }
 
 html {
@@ -31,6 +59,8 @@ html {
 .navbar {
   height: 64px;
   position: relative;
+  background-color: var(--box, white);
+  transition: all 0.4s;
 }
 
 .bannerbtn {
@@ -52,13 +82,13 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--title, black);
 }
 
 nav {
   height: 64px;
   width: 100vw;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   position: fixed;
   top: 0;
   z-index: 1000000;
@@ -85,7 +115,7 @@ nav {
 
 .navbar a {
   text-decoration: none;
-  color: black;
+  color: var(--title, black);
 }
 
 .searchwarpper {
@@ -94,7 +124,7 @@ nav {
   border-radius: 16px;
   border: 2px rgb(29, 219, 115) solid;
   border-right: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   display: flex;
   justify-content: space-between;
   margin-left: 50px;
@@ -105,6 +135,7 @@ nav {
   margin-left: 20px;
   border: 0;
   outline: none;
+  background-color: var(--box, white);
 }
 
 .searchlogo {
@@ -114,7 +145,7 @@ nav {
   top: 23px;
   width: 0.6em;
   height: 0.2em;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   border-top-right-radius: 0.15em;
   border-bottom-right-radius: 0.15em;
   transform: rotate(40deg);
@@ -128,7 +159,7 @@ nav {
   bottom: -0.4em;
   width: 0.6em;
   height: 0.6em;
-  border: 0.2em solid rgb(255, 255, 255);
+  border: 0.2em solid var(--box, white);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -158,7 +189,7 @@ nav {
   width: 220px;
   height: auto;
   top: 36px;
-  background-color: white;
+  background-color: var(--box, white);
   border: #d9ecda 1px solid;
   border-radius: 4px;
   font-size: 12px;
@@ -291,7 +322,7 @@ nav {
   position: absolute;
   width: 740px;
   height: 400px;
-  background-color: white;
+  background-color: var(--box, white);
   top: 58px;
   left: 180px;
   z-index: 1000;
@@ -305,7 +336,7 @@ nav {
   content: "";
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: var(--box, white);
   position: absolute;
   border-radius: 2px;
   transform: rotate(45deg);
@@ -326,12 +357,14 @@ nav {
 
 .menu p {
   font-size: 14px;
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .menutitle {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 5px;
+  color: var(--title, black);
 }
 
 .menuContenter {
@@ -359,6 +392,7 @@ nav {
   margin: 4px 8px;
   font-size: 14px;
   transition: all 0.3s;
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .menuContenter .menulist div:hover {
@@ -380,7 +414,7 @@ nav {
 .left1 {
   width: 200px;
   height: 360px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   border-radius: 8px;
   position: relative;
 }
@@ -406,28 +440,28 @@ nav {
   padding: 0 12px;
   line-height: 32px;
   font-size: 12px;
-  background-color: white;
+  background-color: var(--box, white);
   z-index: 1000;
-  color: rgb(145, 145, 145);
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .a2 {
   font-size: 10px;
   padding: 0 6px;
   cursor: pointer;
-  color: rgb(146, 146, 146);
+  color: var(--text1, rgb(133, 133, 133));
   transition: color 0.3s;
 }
 
 .a1 {
   font-size: 14px;
   padding: 0;
-  color: black;
+  color: var(--title, black);
   transition: all 0.3s;
 }
 
 .lookmore {
-  color: black;
+  color: var(--title, black);
   font-size: 14px;
 }
 
@@ -458,7 +492,7 @@ nav {
 .right1 {
   width: 200px;
   height: 360px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -470,7 +504,7 @@ nav {
 .right1 div:nth-child(1) {
   width: 160px;
   text-align: center;
-  color: rgb(129, 129, 129);
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .right1 div:nth-child(3) {
@@ -480,13 +514,13 @@ nav {
   border-radius: 8px;
   text-align: center;
   line-height: 32px;
-  color: white;
+  color: var(--box, white);
   cursor: pointer;
 }
 
 .right1 div:nth-child(4) {
   font-size: 12px;
-  color: rgb(143, 143, 143);
+  color: var(--text1, rgb(133, 133, 133));
 }
 .main1 {
   position: relative;
@@ -498,7 +532,7 @@ nav {
 .mid1 {
   width: 776px;
   height: 360px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   border-radius: 8px;
   position: relative;
 }
@@ -616,10 +650,11 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: var(--box, white);
   border-radius: 8px;
   height: 60px;
   margin-bottom: 12px;
+  color: var(--title, black);
 }
 
 .main2 img {
@@ -690,14 +725,13 @@ nav {
   margin-bottom: 20px;
   background-color: transparent;
   display: flex;
-  background-color: transparent;
   border-radius: 8px;
   position: relative;
   left: 0px;
 }
 
 .tenbox {
-  background-color: white;
+  background-color: var(--box, white);
   height: 290px;
   width: 224px;
   border-radius: 8px;
@@ -727,15 +761,16 @@ nav {
   box-sizing: border-box;
   width: 224px;
   height: 167px;
-  background-color: white;
+  background-color: var(--box, white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: rgb(63, 63, 63);
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .th3 {
   margin: 0;
+  color: var(--title, black);
   font-size: 16px;
 }
 
@@ -755,12 +790,12 @@ nav {
   width: 200px;
   height: 50px;
   align-self: center;
-  background-color: rgb(246, 246, 246);
+  background-color: var(--background);
   font-size: 12px;
   box-sizing: border-box;
   padding: 5px;
   border-radius: 8px;
-  color: rgb(129, 129, 129);
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 /* 本周热门排行 */
@@ -774,7 +809,7 @@ nav {
 .box {
   width: 387px;
   height: 496px;
-  background-color: white;
+  background-color: var(--box, white);
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -788,19 +823,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-image: linear-gradient(#fff3d3, #ffffff);
+  background-image: linear-gradient(#fff3d3, var(--box, white));
 }
 
 .main4BoxHead span:nth-child(1) {
   font-size: 20px;
   font-weight: 1000;
-  color: rgb(214, 145, 55);
+  color: var(--subtitle, rgb(228, 156, 63));
   padding-left: 38px;
 }
 .main4BoxHead span:nth-child(2) {
   font-size: 0.9em;
   font-size: 14px;
-  color: rgb(214, 145, 55);
+  color: var(--subtitle, rgb(228, 156, 63));
   padding-left: 8px;
   justify-self: left;
 }
@@ -808,7 +843,7 @@ nav {
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  color: #e2e2e2;
+  color: var(--subtext, rgb(228, 228, 228));
   padding-left: 20px;
   padding-right: 16px;
 }
@@ -822,7 +857,7 @@ nav {
   width: 387px;
   height: 64px;
   margin-bottom: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--box, white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -842,7 +877,7 @@ nav {
   height: 40px;
   width: 30px;
   padding-top: 5px;
-  color: #b8b8b8;
+  color: var(--text2, rgb(172, 172, 172));
   font-size: 20px;
   align-self: flex-start;
   justify-self: center;
@@ -869,18 +904,19 @@ nav {
   font-size: 14px;
   font-weight: 500;
   padding-bottom: 2px;
+  color: var(--title, black);
 }
 
 .itemtext4 p:nth-of-type(1) {
   margin: 0;
   font-size: 12px;
-  color: #363636;
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .itemtext4 p:nth-of-type(2) {
   margin: 5px 2px;
   font-size: 12px;
-  color: #6b6b6b;
+  color: var(--text2, rgb(172, 172, 172));
 }
 
 .main4BodyWarp {
@@ -944,7 +980,7 @@ nav {
 /*  */
 .sidebar {
   width: 40px;
-  height: 523px;
+  height: 591px;
   position: fixed;
   right: 16px;
   bottom: 16px;
@@ -954,6 +990,18 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  color: black;
+}
+
+.changeskin {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .sidetop {

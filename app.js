@@ -17,6 +17,7 @@ const db = mysql.createPool({
 const app = express();
 
 app.use(bodyParser.json());
+// app.use('cors');
 
 
 app.use(express.static(path.join(__dirname,'web', 'static' )));//将static开放出去，web没有开放
@@ -55,21 +56,38 @@ app.use(loginRouter);
 // })
 
 // ！模板渲染要弃掉（先干完别的吧
-app.get('/', (req, res) => {
+// app.get('/', (req, res) => {
+//   db.query('select * from table1', (err, results) => {
+//     if (err) return console.log('err' + err.message);
+//     // console.log('succeed ' + results);
+//     app.locals.table1 = results;
+//   })
+
+//   db.query('select * from table2', (err, results) => {
+//     if (err) return console.log('err' + err.message);
+//     // console.log('succeed ' + results);
+//     app.locals.table2 = results;
+//   })
+
+//   res.render('index');//这样可以渲染两个
+
+// })
+//
+
+app.get('/table1', (req, res) => {
   db.query('select * from table1', (err, results) => {
     if (err) return console.log('err' + err.message);
-    // console.log('succeed ' + results);
-    app.locals.table1 = results;
-  })
+    // 推荐的console.log(')
+    res.send(results);
+  })  
+})
 
+app.get('/table2', (req, res) => {
   db.query('select * from table2', (err, results) => {
     if (err) return console.log('err' + err.message);
-    // console.log('succeed ' + results);
-    app.locals.table2 = results;
-  })
-
-  res.render('index');//这样可以渲染两个
-
+    // 排行的
+    res.send(results);
+  })  
 })
 
 

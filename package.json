@@ -16,5 +16,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raxskle/bingyan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raxskle/bingyan/issues"
+  },
+  "homepage": "https://github.com/raxskle/bingyan#readme",
   "description": ""
 }

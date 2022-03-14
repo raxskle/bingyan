@@ -1,0 +1,64 @@
+.right1login {
+  width: 200px;
+  height: 360px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+
+.right1login div:nth-child(1) {
+  width: 160px;
+  text-align: center;
+  color: rgb(129, 129, 129);
+}
+
+.right1login div:nth-child(3) {
+  width: 168px;
+  height: 32px;
+  background-color: #00c758;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+.right1login div:nth-child(4) {
+  font-size: 12px;
+  color: rgb(143, 143, 143);
+}
+
+.login span {
+  padding: 6px;
+}
+
+.logout {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 280px;
+}
+
+.logout img {
+  width: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.searchwarpper {
+  margin-left: 30px !important;
+}
+
+.left1username {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.userimg {
+  width: 100px;
+  border-radius: 50px;
+}

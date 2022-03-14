@@ -1,3 +1,107 @@
+//推荐的渲染
+{
+    let main3contenter = document.querySelector('.main3contenter');
+  
+    //请求数据
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('GET', "http://127.0.0.1/table1");
+    xhr.send();
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              console.log(xhr.response);
+              for (let i = 0; i < xhr.response.length; i++){
+                var tenbox = document.createElement('div');
+                var img = document.createElement('img');
+                var tenboxtext = document.createElement('div');
+                var th3 = document.createElement('h3');
+                var tp1 = document.createElement('p');
+                var tp2 = document.createElement('p');
+                var tdiv = document.createElement('div');
+                tenbox.className = 'tenbox';
+                tenboxtext.className = 'tenboxtext';
+                th3.className = 'th3';
+                tp1.className = 'tp1';
+                tp2.className = 'tp2';
+                tdiv.className = 'tdiv';
+                img.src = xhr.response[i].url;
+                th3.innerHTML = xhr.response[i].title;
+                tp1.innerHTML = xhr.response[i].text1;
+                tp2.innerHTML = xhr.response[i].text2;
+                tdiv.innerHTML = xhr.response[i].text3;
+  
+                main3contenter.appendChild(tenbox);
+                tenbox.appendChild(img);
+                tenbox.appendChild(tenboxtext);
+                tenboxtext.appendChild(th3);
+                tenboxtext.appendChild(tp1);
+                tenboxtext.appendChild(tp2);
+                tenboxtext.appendChild(tdiv);
+  
+                }
+  
+            }
+        }
+    }     
+  
+  }
+  
+  {//排行的渲染
+    let contentSheet = document.querySelectorAll('.contentSheet');
+    //请求数据
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('GET', "http://127.0.0.1/table2");
+    xhr.send();
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              console.log(xhr.response);
+              for (let j = 0; j < contentSheet.length; j++){
+                for (let i = 0; i < xhr.response.length; i++){
+                  var contentItem = document.createElement('div');
+                  var number = document.createElement('div');
+                  var pic4 = document.createElement('img');
+                  var itemtext4 = document.createElement('div');
+                  var h3 = document.createElement('h3');
+                  var p1 = document.createElement('p');
+                  var p2 = document.createElement('p');
+                  contentItem.className = 'contentItem';
+                  number.className = 'number';
+                  pic4.className = 'pic4';
+                  itemtext4.className = 'itemtext4';
+  
+                  number.innerHTML = xhr.response[i].id;
+                  let src = "/images/main4pic.png";
+                  pic4.src = src;
+                  h3.innerHTML = xhr.response[i].title;
+                  p1.innerHTML = xhr.response[i].text1;
+                  p2.innerHTML = xhr.response[i].text2;
+  
+                  contentSheet[j].appendChild(contentItem);
+                  contentItem.appendChild(number);
+                  contentItem.appendChild(pic4);
+                  contentItem.appendChild(itemtext4);
+                  itemtext4.appendChild(h3);
+                  itemtext4.appendChild(p1);
+                  itemtext4.appendChild(p2);
+                }              
+              }
+  
+  
+            }
+        }
+    }     
+  
+  
+  }
+  
+  
+
+
+
+
 {//轮播图
 
 let goLeft = document.querySelector('.goLeft')
@@ -504,7 +608,7 @@ setInterval(function(){
 
 
 
-{//注册
+{//登录
     let loginId = document.querySelector('.loginId');
     let loginPw = document.querySelector('.loginPw');
     let loginSubmit = document.querySelector('.loginSubmit');
@@ -535,16 +639,20 @@ setInterval(function(){
             if (xhr.readyState === 4) {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     loginAlert.innerHTML = xhr.response;
-                    setTimeout(() => {
-                        loginAlert.innerHTML = "";
-                        // 跳到新页面
+                    if (xhr.response == "登录成功") {
+                        setTimeout(() => {
+                            loginAlert.innerHTML = "";
+                            // 跳到新页面
+                            location.href = 'userpage.html';
+                        }, 1500)                        
+                    }
+                    else {
+                        setTimeout(() => {
+                            loginAlert.innerHTML = "";
 
+                        }, 1500)                          
+                    }
 
-
-
-
-
-                    }, 3000)
                     
 
                 }
@@ -552,5 +660,45 @@ setInterval(function(){
         }   
     })
 
+
+}
+
+
+
+
+{//换肤
+    let changeSikn = document.querySelector('.changeskin');
+    let flag = 0;
+    changeSikn.addEventListener('click', () => {
+        let root = document.documentElement;
+        let hzd = document.querySelectorAll('.main2 img');
+        if (flag == 0) {
+            root.style.setProperty('--title', 'white');      
+            root.style.setProperty('--text1', 'rgb(204, 204, 204)');      
+            root.style.setProperty('--text2', 'rgb(122, 122, 122)');      
+            root.style.setProperty('--subtitle', 'rgb(228, 156, 63)');      
+            root.style.setProperty('--subtext', 'rgb(73, 73, 73)');      
+            root.style.setProperty('--background', 'rgb(0, 0, 0)');      
+            root.style.setProperty('--box', 'rgb(31, 31, 31)');     
+            flag = 1;
+            for (let i = 0; i < hzd.length; i++){
+                hzd[i].src = "images/hzd3.png";
+            }
+        }
+        else if (flag == 1) {
+            root.style.setProperty('--title', 'black');      
+            root.style.setProperty('--text1', 'rgb(133, 133, 133)');      
+            root.style.setProperty('--text2', 'rgb(172, 172, 172)');      
+            root.style.setProperty('--subtitle', 'rgb(228, 156, 63)');      
+            root.style.setProperty('--subtext', 'rgb(228, 228, 228)');      
+            root.style.setProperty('--background', 'rgb(245, 245, 245)');      
+            root.style.setProperty('--box', 'white');    
+            flag = 0;
+            for (let i = 0; i < hzd.length; i++){
+                hzd[i].src = "images/hzd.png";
+            }
+        }
+
+    })
 
 }

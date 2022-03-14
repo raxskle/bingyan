@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MyMooc</title>
+    <link rel="shortcut icon" href="images\titlelogo.png" type="image/png" />
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="loginmodule.css" />
 	<link rel="stylesheet"  href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" />
@@ -154,11 +155,11 @@
             <span class="fa fa-angle-right"></spancla>
         </div>
         <ul>
-            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.jpg"></a></li>
-            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.jpg"></a></li>
-            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.jpg"></a></li>
-            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.jpg"></a></li>
-            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.jpg"></a></li>
+            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.png"></a></li>
+            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.png"></a></li>
+            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.png"></a></li>
+            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.png"></a></li>
+            <li><a href="https://www.bilibili.com/" target="_blank"><img src="images\hzd.png"></a></li>
         </ul>
     </div>
 
@@ -167,17 +168,7 @@
         <div class="beforemain3"><img src="images\left.png"></div>
         <div class="main3warp">
             <div class="main3contenter">
-                {{each table1 as value}}
-                <div class="tenbox">
-                    <img src="{{value.url}}">
-                    <div class="tenboxtext">
-                        <h3 class="th3">{{value.title}}</h3><!-- 不要有$ -->
-                        <p class="tp1">{{value.text1}}</p>                    
-                        <p class="tp2">{{value.text2}}</p>
-                        <div class="tdiv">{{value.text3}}</div>
-                    </div>
-                </div>    
-                {{/each}}
+
             </div>            
         </div>
         <div class="aftermain3"><img src="images\right.png"></div>
@@ -196,18 +187,7 @@
             <div class="mainBoxBody">
                 <div class="main4BodyWarp">
                     <div class="contentSheet">
-
-                            {{each table2 as value}}
-                            <div class="contentItem">
-                                <div class="number ">{{value.id}}</div>
-                                <img class="pic4" src="images\main4pic.png">
-                                <div class="itemtext4">
-                                    <h3>{{value.title}}</h3>
-                                    <p>{{value.text1}}</p>
-                                    <p>{{value.text2}}</p>
-                                </div>
-                            </div>
-                            {{/each}}      
+ 
                     </div>
                 </div>
 
@@ -225,17 +205,7 @@
             <div class="mainBoxBody">
                 <div class="main4BodyWarp">
                     <div class="contentSheet">
-                        {{each table2 as value}}
-                        <div class="contentItem">
-                            <div class="number ">{{value.id}}</div>
-                            <img class="pic4" src="images\main4pic.png">
-                            <div class="itemtext4">
-                                <h3>{{value.title}}</h3>
-                                <p>{{value.text1}}</p>
-                                <p>{{value.text2}}</p>
-                            </div>
-                        </div>
-                        {{/each}}                             
+                       
                                
                     </div>
                 </div>
@@ -255,17 +225,7 @@
             <div class="mainBoxBody">
                 <div class="main4BodyWarp">
                     <div class="contentSheet">
-                        {{each table2 as value}}
-                        <div class="contentItem">
-                            <div class="number ">{{value.id}}</div>
-                            <img class="pic4" src="images\main4pic.png">
-                            <div class="itemtext4">
-                                <h3>{{value.title}}</h3>
-                                <p>{{value.text1}}</p>
-                                <p>{{value.text2}}</p>
-                            </div>
-                        </div>
-                        {{/each}}    
+
                     </div>
                 </div>
 
@@ -281,6 +241,7 @@
 
 
     <div class="sidebar">
+        <div class="changeskin">换肤</div>
         <div class="sidetop"><img src="images\aside1.jpg"></div>
         <div class="sidemid"><div>同道计划</div></div>
         <div class="sidebottomTop">
