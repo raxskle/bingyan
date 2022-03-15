@@ -1,27 +1,28 @@
 :root {
   --title: black;
-  --text1: rgb(133, 133, 133);
+  --text1: rgb(126, 126, 126);
   --text2: rgb(172, 172, 172);
   --subtitle: rgb(228, 156, 63);
   --subtext: rgb(228, 228, 228);
   --subbackground: rgb(228, 228, 228);
+  --subyellow: rgb(255, 243, 211);
   --background: rgb(245, 245, 245);
   --box: white;
-
-  --bright-title: black;
-  --bright-text1: rgb(133, 133, 133);
-  --bright-subtitle: rgb(228, 156, 63);
-  --bright-subtext: rgb(228, 228, 228);
-  --bright-background: rgb(245, 245, 245);
-  --bright-box: white;
+  --shadow: rgba(179, 179, 179, 0.349);
+  --tenboxshadow: rgb(226, 225, 225);
+  --menuitem: rgba(235, 235, 235, 0.58);
 
   --dark-title: white;
-  --dark-text1: rgb(204, 204, 204);
+  --dark-text1: rgb(190, 190, 190);
   --dark-text2: rgb(122, 122, 122);
   --dark-subtitle: rgb(228, 156, 63);
   --dark-subtext: rgb(73, 73, 73);
+  --dark-subyellow: rgb(39, 31, 13);
   --dark-background: rgb(0, 0, 0);
   --dark-box: rgb(31, 31, 31);
+  --dark-shadow: rgb(40, 40, 40);
+  --dark-tenboxshadow: rgb(22, 22, 22);
+  --dark-menuitem: rgba(65, 64, 64, 0.58);
 }
 
 body,
@@ -52,6 +53,7 @@ html {
 
   justify-content: space-between;
   align-items: center;
+  transition: all 0.4s;
 }
 
 /* 导航 */
@@ -136,6 +138,7 @@ nav {
   border: 0;
   outline: none;
   background-color: var(--box, white);
+  color: var(--title, black);
 }
 
 .searchlogo {
@@ -327,7 +330,7 @@ nav {
   left: 180px;
   z-index: 1000;
   border-radius: 2px;
-  box-shadow: 0 0 4px 4px rgba(179, 179, 179, 0.349);
+  box-shadow: 0 0 4px 4px var(--shadow, rgba(179, 179, 179, 0.349));
   padding: 20px;
   display: none;
 }
@@ -342,7 +345,7 @@ nav {
   transform: rotate(45deg);
   top: -9px;
   left: 102px;
-  box-shadow: -3px -3px rgba(212, 212, 212, 0.349);
+  box-shadow: -3px -3px 4px 0px var(--shadow, rgba(179, 179, 179, 0.349));
 }
 .menu::before {
   content: "";
@@ -386,7 +389,7 @@ nav {
   height: 30px;
   line-height: 30px;
   text-align: center;
-  background-color: #ebebeb94;
+  background-color: var(--menuitem, rgba(235, 235, 235, 0.58));
   border-radius: 15px;
   cursor: pointer;
   margin: 4px 8px;
@@ -689,7 +692,7 @@ nav {
 }
 
 .main3warp {
-  width: 1200px;
+  width: 1250px;
   position: relative;
   overflow: hidden;
 }
@@ -743,7 +746,7 @@ nav {
 }
 
 .tenbox:hover {
-  box-shadow: 0px 5px 10px 8px #e2e1e1;
+  box-shadow: 0px 5px 10px 8px var(--tenboxshadow, rgb(226, 225, 225));
   cursor: pointer;
   transition: 0.5s;
 }
@@ -823,7 +826,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-image: linear-gradient(#fff3d3, var(--box, white));
+  background-image: linear-gradient(
+    var(--subyellow, rgb(255, 243, 211)),
+    var(--box, white)
+  );
 }
 
 .main4BoxHead span:nth-child(1) {
@@ -999,15 +1005,16 @@ nav {
   text-align: center;
   border-radius: 8px;
   margin-bottom: 8px;
-  background-color: white;
+  background-color: var(--box, white);
   cursor: pointer;
   font-size: 14px;
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .sidetop {
   height: 237px;
   margin-bottom: 8px;
-  background-color: aliceblue;
+  background-color: var(--box, white);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -1034,7 +1041,7 @@ nav {
 
 .sidebottom {
   height: 180px;
-  background-color: white;
+  background-color: var(--box, white);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -1044,7 +1051,7 @@ nav {
 
 .sidebottomTop {
   height: 120px;
-  background-color: white;
+  background-color: var(--box, white);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -1080,6 +1087,11 @@ nav {
 .sbcontent p,
 .sbcontentTop p {
   margin: 0;
+  color: var(--text1, rgb(133, 133, 133));
+}
+
+.sbcontentTop a {
+  color: var(--text1, rgb(133, 133, 133));
 }
 
 .sb3,

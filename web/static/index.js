@@ -238,8 +238,8 @@ setInterval(function(){
                 
             })    
             item[j].addEventListener('mouseout',()=>{
-                a[k].style.color='black';
-                b[k-1].style.color='rgb(146, 146, 146)';
+                a[k].style.color='var(--title, black)';
+                b[k-1].style.color='var(--text1, rgb(133, 133, 133))';
             })     
         }
         else {
@@ -248,8 +248,8 @@ setInterval(function(){
                 b[k-2].style.color='#00c758';
             })    
             item[j].addEventListener('mouseout',()=>{
-                a[k-1].style.color='black';
-                b[k-2].style.color='rgb(146, 146, 146)';
+                a[k-1].style.color='var(--title, black)';
+                b[k-2].style.color='var(--text1, rgb(133, 133, 133))';
             })                 
         }
              
@@ -320,7 +320,7 @@ setInterval(function(){
     menubtn.addEventListener('mouseout', () => {
         menu.style.display = 'none';
         menubtnIcon.className = 'menubtnUnactive';    
-        menubtntext.style.color = 'black';
+        menubtntext.style.color = 'var(--title, black)';
     })    
     menu.addEventListener('mouseover', () => {
         menu.style.display = 'block';
@@ -672,31 +672,52 @@ setInterval(function(){
     changeSikn.addEventListener('click', () => {
         let root = document.documentElement;
         let hzd = document.querySelectorAll('.main2 img');
+        let logo = document.querySelector('.header .logo');
+        let sb1 = document.querySelector('.sb1 p img');
+        let sb2 = document.querySelector('.sb2 p img');
+        let sb3 = document.querySelector('.sb3 a img');
+
         if (flag == 0) {
             root.style.setProperty('--title', 'white');      
-            root.style.setProperty('--text1', 'rgb(204, 204, 204)');      
+            root.style.setProperty('--text1', 'rgb(190, 190, 190)');      
             root.style.setProperty('--text2', 'rgb(122, 122, 122)');      
             root.style.setProperty('--subtitle', 'rgb(228, 156, 63)');      
             root.style.setProperty('--subtext', 'rgb(73, 73, 73)');      
             root.style.setProperty('--background', 'rgb(0, 0, 0)');      
             root.style.setProperty('--box', 'rgb(31, 31, 31)');     
+            root.style.setProperty('--subyellow', 'rgb(39, 31, 13)');     
+            root.style.setProperty('--menuitem', 'rgba(65, 64, 64, 0.58)');     
+            root.style.setProperty('--shadow', 'rgb(40, 40, 40)');     
+            root.style.setProperty('--tenboxshadow', 'rgb(22, 22, 22)');     
             flag = 1;
             for (let i = 0; i < hzd.length; i++){
                 hzd[i].src = "images/hzd3.png";
             }
+            logo.src = 'images/logo2.png';
+            sb1.src = 'images/fankui2.png';
+            sb2.src = 'images/xiazai2.png';
+            sb3.src = 'images/dingbu2.png';
         }
         else if (flag == 1) {
             root.style.setProperty('--title', 'black');      
-            root.style.setProperty('--text1', 'rgb(133, 133, 133)');      
+            root.style.setProperty('--text1', 'rgb(126, 126, 126)');      
             root.style.setProperty('--text2', 'rgb(172, 172, 172)');      
             root.style.setProperty('--subtitle', 'rgb(228, 156, 63)');      
             root.style.setProperty('--subtext', 'rgb(228, 228, 228)');      
+            root.style.setProperty('--subyellow', 'rgb(255, 243, 211)');      
             root.style.setProperty('--background', 'rgb(245, 245, 245)');      
             root.style.setProperty('--box', 'white');    
+            root.style.setProperty('--shadow', 'rgba(179, 179, 179, 0.349)');     
+            root.style.setProperty('--tenboxshadow', 'rgb(226, 225, 225)');     
+            root.style.setProperty('--menuitem', 'rgba(235, 235, 235, 0.58)');    
             flag = 0;
             for (let i = 0; i < hzd.length; i++){
                 hzd[i].src = "images/hzd.png";
             }
+            logo.src = 'images/logo.png';
+            sb1.src = 'images/fankui.png';
+            sb2.src = 'images/xiazai.png';
+            sb3.src = 'images/dingbu.png';
         }
 
     })
