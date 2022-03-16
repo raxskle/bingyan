@@ -4,6 +4,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
+    "express-jwt": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1"
   },
   "name": "bingyan",
@@ -15,7 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raxskle/bingyan.git"
@@ -24,5 +25,6 @@
     "url": "https://github.com/raxskle/bingyan/issues"
   },
   "homepage": "https://github.com/raxskle/bingyan#readme",
+  "devDependencies": {},
   "description": ""
 }
