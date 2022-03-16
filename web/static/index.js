@@ -428,7 +428,7 @@ setInterval(function(){
     let sb3=document.querySelector('.sb3Top');
     window.onscroll = () => {
         let scrollDis = document.body.scrollTop || document.documentElement.scrollTop;
-        if (scrollDis > 0) {
+        if (scrollDis > 10) {
             toTopBtn.style.display = 'flex';
             sidebottomTop.className = 'sidebottom';
             sb2.className = 'sbcontent sb2';
